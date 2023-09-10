@@ -1,4 +1,3 @@
-const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer");
 const { ModuleFederationPlugin } = require('webpack').container;
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const path = require('path')

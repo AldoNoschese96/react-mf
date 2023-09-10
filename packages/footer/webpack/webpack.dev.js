@@ -1,8 +1,6 @@
-const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer");
 const { ModuleFederationPlugin } = require('webpack').container;
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
-const mfConfig = require("../../../modulefederation.config.json");
 
 module.exports = (env) => {
   const mfConfig = require("../../../modulefederation.config.json");

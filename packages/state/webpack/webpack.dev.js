@@ -1,4 +1,3 @@
-const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer");
 const { ModuleFederationPlugin } = require('webpack').container;
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const path = require('path')
@@ -39,11 +38,6 @@ module.exports = (env) => {
           },
         },
       }),
-      // new BundleAnalyzerPlugin({
-      //   logLevel: 'info',
-      //   openAnalyzer:false,
-      //   analyzerHost:'0.0.0.0'
-      // }),
       new HtmlWebpackPlugin({
         inject: true,
         minify: false,
