@@ -1,0 +1,80 @@
+{
+  "shell": {
+    "name": "shell",
+    "development": {
+      "remotes": {
+        "header": "header@http://localhost:3001/remoteEntry.js",
+        "footer": "footer@http://localhost:3002/remoteEntry.js",
+        "state": "state@http://localhost:3003/remoteEntry.js"
+      }
+    },
+    "production": {
+      "remotes": {
+        "header": "header@http://localhost:3001/remoteEntry.js",
+        "footer": "footer@http://localhost:3002/remoteEntry.js",
+        "state": "state@http://localhost:3003/remoteEntry.js"
+      }
+    }
+  },
+  "header": {
+    "name": "header",
+    "development": {
+      "remotes": {
+        "state": "state@http://localhost:3003/remoteEntry.js"
+      },
+      "exposes": {
+        "./src/App": "./src/App.tsx",
+        "./Header": "./src/presentation/components/Header.tsx"
+      }
+    },
+    "production": {
+      "remotes": {
+        "state": "state@http://localhost:3003/remoteEntry.js"
+      },
+      "exposes": {
+        "./src/App": "./src/App.tsx",
+        "./Header": "./src/presentation/components/Header.tsx"
+      }
+    }
+  },
+  "footer": {
+    "name": "footer",
+    "development": {
+      "remotes": {
+        "state": "state@http://localhost:3003/remoteEntry.js"
+      },
+      "exposes": {
+        "./src/App": "./src/App.tsx",
+        "./Footer": "./src/presentation/components/Footer.tsx"
+      }
+    },
+    "production": {
+      "remotes": {
+        "state": "state@http://localhost:3003/remoteEntry.js"
+      },
+      "exposes": {
+        "./src/App": "./src/App.tsx",
+        "./Footer": "./src/presentation/components/Footer.tsx"
+      }
+    }
+  },
+  "state": {
+    "name": "state",
+    "development": {
+      "remotes": {},
+      "exposes": {
+        "./src/App": "./src/App.tsx",
+        "./Atoms": "./src/state/atoms/index.ts",
+        "./Selectors": "./src/state/selectors/index.ts"
+      }
+    },
+    "production": {
+      "remotes": {},
+      "exposes": {
+        "./src/App": "./src/App.tsx",
+        "./Atoms": "./src/state/atoms/index.ts",
+        "./Selectors": "./src/state/selectors/index.ts"
+      }
+    }
+  }
+}

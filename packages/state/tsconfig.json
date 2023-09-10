@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./src",
+    "jsx": "react",
+    "esModuleInterop": true,
+    "paths": {
+      "@state/*": [
+        "./state/*"
+      ]
+    }
+  },
+  "include": [
+    "./**/*.ts",
+    "./**/*.tsx",
+    "src/**/*",
+    "**/*.spec.ts",
+    "**/*.test.ts",
+    "**/*.cy.ts",
+    "cypress/e2e/Auth.cy.ts",
+    "cypress/e2e/Auth.cy.ts"
+  ],
+  "plugins": []
+}

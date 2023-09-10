@@ -1,0 +1,61 @@
+{
+  "name": "state",
+  "version": "1.0.0",
+  "main": "./src/index.tsx",
+  "scripts": {
+    "start:dist": "yarn run build:production && cd dist && PORT=3001 npx serve",
+    "start:development": "NODE_ENV=development webpack serve --open --mode development --live-reload --hot --env development",
+    "start:staging": "NODE_ENV=production webpack serve --open --mode development --live-reload --hot --env staging",
+    "start:production": "NODE_ENV=production webpack serve --open --mode development --live-reload --hot --env production",
+    "build:development": "NODE_ENV=development webpack --mode development --env development",
+    "build:staging": "NODE_ENV=production webpack --mode production --env staging",
+    "build:production": "NODE_ENV=production webpack --mode production --env production",
+    "lint:check": "yarn rome check ./src",
+    "lint:fix": "yarn rome check ./src --apply",
+    "lint:format": "rome format ./src --write --semicolons as-needed",
+    "cypress:open": "cypress open",
+    "test:unit": "jest  --coverage"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Aldo Noschese",
+    "email": "aldonoschese@gmail.com"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.15.8",
+    "@babel/plugin-transform-runtime": "^7.15.8",
+    "@babel/preset-env": "^7.15.8",
+    "@babel/preset-react": "^7.14.5",
+    "@babel/preset-typescript": "^7.10.4",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^12.0.4",
+    "@testing-library/user-event": "^14.4.3",
+    "@types/jest": "^29.1.2",
+    "@types/react": "^17.0.2",
+    "@types/react-dom": "^17.0.2",
+    "autoprefixer": "^10.1.0",
+    "babel-loader": "^8.2.2",
+    "cypress": "^10.10.0",
+    "cypress-keycloak-commands": "^1.2.0",
+    "dotenv-webpack": "^8.0.1",
+    "file-loader": "^6.2.0",
+    "html-webpack-plugin": "^5.3.2",
+    "jest": "^29.1.2",
+    "jest-environment-jsdom": "^29.1.2",
+    "jest-transformer-svg": "^2.0.0",
+    "rome": "12.0.0",
+    "ts-jest": "^29.0.3",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.5.2",
+    "webpack": "^5.57.1",
+    "webpack-bundle-analyzer": "^4.8.0",
+    "webpack-cli": "^4.9.0",
+    "webpack-dev-server": "^4.3.1",
+    "webpack-merge": "^5.8.0"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "recoil": "^0.7.7"
+  }
+}
